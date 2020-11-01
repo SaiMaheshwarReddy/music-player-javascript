@@ -30,7 +30,7 @@ window.onload = playSong;
 function playSong() {
     audio.src = audios[currentSong]
     selectABox(currentSong)
-    // audio.play()
+    audio.play()
     
    
 }
