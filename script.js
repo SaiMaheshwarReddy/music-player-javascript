@@ -30,7 +30,7 @@ window.onload = playSong;
 function playSong() {
     audio.src = audios[currentSong]
     selectABox(currentSong)
-    audio.play()
+    // audio.play()
     
    
 }
@@ -201,12 +201,5 @@ Box[pos].classList.add("selected")
 
 
 
-    // <div class="song__box">
-    //             <div class="playlist__img__box">
-    //                 <img src="./covers/byyourside.jpg" class="playlist__img" alt="">
-    //             </div>
-
-    //             <h2 class="playlist__title__text">Vellipomakey</h2>
-
-    //         </div>
+   
 
