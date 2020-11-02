@@ -22,10 +22,10 @@ body {
 .music__player {
   /* width: 250px;
   height: 380px; */
-  width: 22vw;
-  height: 66vh;
+  width: 26vw;
+  height: 65vh;
   margin-right: 35%;
-  background-color: rgb(7, 126, 100);
+  background-color: rgb(31, 175, 96);
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -114,13 +114,15 @@ a {
   }
 }
 .music__playlist {
-  width: 30vw;
-  height: 100vh;
+  width: 22vw;
+  height: 80vh;
+  margin: auto 0;
   /* overflow: auto; */
 }
 .song__box {
-  width: 98%;
-  height: 70px;
+  width: 85%;
+  height: 60px;
+  margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -133,7 +135,7 @@ a {
   transform: scale(1.04);
 }
 .selected {
-  background-color: crimson !important;
+  background-color: rgb(235, 52, 89);
   color: white;
 }
 .playlist__img__box {
@@ -151,16 +153,16 @@ a {
 .playlist__title__text {
   font-weight: bold;
   margin-right: 20px;
-  font-size: 20px;
+  font-size: 16px;
   pointer-events: none;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   body {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflows: hidden;
+    overflow: hidden;
   }
   .container {
     /* background-color: crimson; */
@@ -170,7 +172,7 @@ a {
     flex-direction: column;
     display: grid;
     justify-items: center;
-    grid-template-columns: 95%;
+    grid-template-columns: 96%;
     grid-template-rows: 500px 200px;
     grid-template-areas: "box2" "box1";
     row-gap: 25px;
