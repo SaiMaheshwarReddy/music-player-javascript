@@ -26,7 +26,7 @@ document.querySelector(".previous").addEventListener("click", (e)=> {
     e.preventDefault()
     prevAudio()
     })
-window.onload = playSong;
+// window.onload = playSong;
 function playSong() {
     audio.src = audios[currentSong]
     selectABox(currentSong)
@@ -37,7 +37,7 @@ function playSong() {
 
 function togglePlayPause() {
     if(audio.paused){
-        audio.play()
+       playSong()
         let playBtn = document.querySelector(".play")
         playBtn.innerHTML = "<i class='fa fa-pause'><i></i>"
     } else{
@@ -53,6 +53,10 @@ audio.addEventListener("timeupdate", ()=>{
     seekFiller.style.width = position * 100 + "%";
     changeTime(Math.round(audio.currentTime))
 })
+
+if(audio.ended){
+    nextAudio()
+}
 
 function changeTime(seconds) {
     let min = Math.floor(seconds/60);
@@ -92,7 +96,7 @@ imgBox.setAttribute("src", covers[currentSong])
 function prevAudio() {
     currentSong--;
     if(currentSong < 0) {
-        currentSong = 2;
+        currentSong = 7;
     }
     selectABox(currentSong)
     titleText.textContent = titles[currentSong]
